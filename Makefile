@@ -18,9 +18,13 @@ $(BUILD_DIR)/GPAEstimator.exe: all always
 
 # Running the executable
 run:
-	./build/GPAEstimater.exe
+        ./$(target)
 
 # Directories that must always exist during make
 always:
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(OBJ_DIR)
+
+# Cleaning the executable
+clean:
+        rm -rf $(BUILD_DIR)
